@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigil Encoder/Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⛧ Sigil Encoder/Decoder ⛧</h1>
+        
+        <div class="section">
+            <h2>Encode Text</h2>
+            
+            <div class="input-group">
+                <label for="inputText">Enter text to encode:</label>
+                <textarea id="inputText" placeholder="Type your message here..."></textarea>
+            </div>
+            
+            <div class="input-group">
+                <label for="styleSelect">Encoding style:</label>
+                <select id="styleSelect">
+                    <option value="ascii">ASCII Art</option>
+                    <option value="random">Random Characters</option>
+                    <option value="occult">Occult Sigils</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="fileInput">Or load from file:</label>
+                <input type="file" id="fileInput" accept=".txt">
+                <button onclick="loadFileToEncode()">Load File</button>
+            </div>
+            
+            <button onclick="encodeSigil()" class="primary-btn">Generate Sigil</button>
+        </div>
+        
+        <div id="results" class="section" style="display: none;">
+            <h2>Results</h2>
+            
+            <div class="output-group">
+                <h3>Original Sigil:</h3>
+                <pre id="originalSigil" class="sigil-output"></pre>
+            </div>
+            
+            <div class="output-group">
+                <h3>Sigil with Embedded Binary:</h3>
+                <pre id="stegoSigil" class="sigil-output"></pre>
+            </div>
+            
+            <div class="output-group">
+                <h3>Decoding Information:</h3>
+                <div id="binaryInfo" class="info-box"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Decode Binary</h2>
+            
+            <div class="input-group">
+                <label for="binaryInput">Enter binary values (space-separated 8-bit values):</label>
+                <textarea id="binaryInput" placeholder="01001000 01101001 01100101"></textarea>
+            </div>
+            
+            <button onclick="decodeBinary()" class="primary-btn">Decode</button>
+            
+            <div id="decodeResults" class="output-group" style="display: none;">
+                <h3>Decoded Text:</h3>
+                <div id="decodedText" class="decoded-output"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="sigil.js"></script>
+</body>
+</html>
