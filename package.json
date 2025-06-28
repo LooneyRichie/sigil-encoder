@@ -1,0 +1,33 @@
+{
+  "name": "sigil-encoder-web-server",
+  "version": "1.0.0",
+  "description": "A dark web application for encoding text using ASCII art sigils and occult symbols with steganographic capabilities",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "sigil",
+    "encoder",
+    "ascii-art",
+    "steganography",
+    "occult",
+    "web-server",
+    "nodejs",
+    "binary-encoding"
+  ],
+  "author": "Looney",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/sigil-encoder-web-server"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/your-username/sigil-encoder-web-server#readme"
+}
