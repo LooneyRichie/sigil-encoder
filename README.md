@@ -23,7 +23,8 @@ basic-web-server/
 │   ├── styles.css          # Dark terminal styling
 │   └── sigil.js            # JavaScript sigil encoding logic
 ├── package.json            # npm configuration
-└── README.md               # This file
+|- README.md               # This file
+|_ License.mit             # MIT license
 ```
 
 ## Getting Started
@@ -37,8 +38,8 @@ basic-web-server/
 
 1. Clone or download this repository:
    ```bash
-   git clone <repository-url>
-   cd basic-web-server
+   git clone https://github.com/looneyrichie/sigil-encoder.git
+   cd sigil-encoder
    ```
 
 2. Install dependencies:
